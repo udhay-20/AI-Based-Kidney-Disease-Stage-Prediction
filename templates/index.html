@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CKD Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Chronic Kidney Disease Prediction</h2>
+
+        <form action="/predict" method="post">
+
+            <label for="sg">Specific Gravity (sg):</label>
+            <input type="number" id="sg" name="sg" step="0.001" min="1.005" max="1.025" placeholder="e.g. 1.010" required>
+
+            <label for="al">Albumin (al):</label>
+            <input type="number" id="al" name="al" min="0" max="5" placeholder="0 - 5" required>
+
+            <label for="sc">Serum Creatinine (sc):</label>
+            <input type="number" id="sc" name="sc" step="0.01" min="0.4" max="15" placeholder="e.g. 1.2" required>
+
+            <label for="hemo">Hemoglobin (hemo):</label>
+            <input type="number" id="hemo" name="hemo" step="0.1" min="3" max="20" placeholder="e.g. 13.5" required>
+
+            <button type="submit">Predict</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
